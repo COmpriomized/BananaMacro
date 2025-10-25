@@ -1,0 +1,10 @@
+{
+  "Id": "com.example.sampleplugin",
+  "Name": "Sample Plugin",
+  "Version": "1.0.0",
+  "Assembly": "SamplePlugin.dll",
+  "EntryType": "SamplePlugin.SamplePluginImpl",
+  "Description": "A minimal sample plugin for BananaMacro.",
+  "Permissions": [],
+  "MinimumHostVersion": "0.1.0"
+}

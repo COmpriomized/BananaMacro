@@ -1,0 +1,26 @@
+{
+  "Id": "banana-default-lightblack",
+  "Name": "Banana Default LightBlack",
+  "Author": "BananaMacro",
+  "Description": "Light-black variant: modern near-black background with soft, readable accents",
+  "IsDark": false,
+  "Colors": {
+    "WindowBackground": "#1F1F1F",
+    "PrimaryText": "#E6E6E6",
+    "SecondaryText": "#BDBDBD",
+    "Accent": "#00A6FF",
+    "PanelBackground": "#262626",
+    "Border": "#3A3A3A",
+    "ControlBackground": "#2A2A2A",
+    "ControlHover": "#333333",
+    "Disabled": "#6E6E6E"
+  },
+  "Fonts": {
+    "BaseFont": "Segoe UI",
+    "MonoFont": "Consolas"
+  },
+  "Extras": {
+    "CornerRadius": "4",
+    "OverlayTransparent": "rgba(31,31,31,0.85)"
+  }
+}

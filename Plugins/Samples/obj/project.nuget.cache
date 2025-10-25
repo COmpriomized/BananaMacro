@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "GloqOKXc2Tw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ekd12\\Desktop\\OPVSB\\BananaMacro\\Plugins\\Samples\\SamplePlugin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ekd12\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ekd12\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\ekd12\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\ekd12\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}

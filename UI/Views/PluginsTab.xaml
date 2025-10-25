@@ -1,0 +1,10 @@
+<UserControl x:Class="BananaMacro.UI.Views.PluginsTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid Background="{DynamicResource PanelBrush}" Padding="12">
+    <StackPanel>
+      <TextBlock Text="Plugins" Style="{StaticResource SectionTitle}"/>
+      <TextBlock Text="Install, enable and configure plugins" Foreground="{DynamicResource TextBrush}" Margin="0,8,0,0"/>
+    </StackPanel>
+  </Grid>
+</UserControl>

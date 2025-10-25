@@ -1,0 +1,8 @@
+{
+  "id": "banana-ai-v1",
+  "version": "1.0.0",
+  "createdAt": "2025-10-25T12:00:00Z",
+  "sourceHash": "a1b2c3d4e5",
+  "inputShape": [1, 512],
+  "outputSpec": ["label", "confidence"]
+}

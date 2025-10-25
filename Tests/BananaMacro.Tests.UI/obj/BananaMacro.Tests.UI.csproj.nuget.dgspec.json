@@ -1,0 +1,102 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ekd12\\Desktop\\OPVSB\\BananaMacro\\Tests\\BananaMacro.Tests.UI\\BananaMacro.Tests.UI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ekd12\\Desktop\\OPVSB\\BananaMacro\\Tests\\BananaMacro.Tests.UI\\BananaMacro.Tests.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ekd12\\Desktop\\OPVSB\\BananaMacro\\Tests\\BananaMacro.Tests.UI\\BananaMacro.Tests.UI.csproj",
+        "projectName": "BananaMacro.Tests.UI",
+        "projectPath": "C:\\Users\\ekd12\\Desktop\\OPVSB\\BananaMacro\\Tests\\BananaMacro.Tests.UI\\BananaMacro.Tests.UI.csproj",
+        "packagesPath": "C:\\Users\\ekd12\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ekd12\\Desktop\\OPVSB\\BananaMacro\\Tests\\BananaMacro.Tests.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ekd12\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "FlaUI.Core": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "FlaUI.UIA3": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ribboninterfaces",
+  "version": "1.0.0",
+  "description": "Modular ribbon interface system for BananaMacro UI",
+  "main": "bootstrap.js",
+  "scripts": {
+    "start": "parcel bootstrap.html",
+    "build": "parcel build bootstrap.html --dist-dir dist",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "ribbon",
+    "ui",
+    "macro",
+    "toolbar",
+    "interface"
+  ],
+  "author": "BananaMacro",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  },
+  "type": "commonjs"
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GearConfig — Gear Cards</title>
+  <style>
+    :root{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;padding:0;color:#111}
+    body{background:#f6f7fb;padding:24px;display:flex;flex-direction:column;gap:16px;min-height:100vh}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    h1{font-size:20px;margin:0}
+    .controls{display:flex;gap:8px;align-items:center}
+    input[type="search"]{padding:8px 10px;border-radius:6px;border:1px solid #d0d5df;background:#fff;min-width:200px}
+    button{padding:8px 10px;border-radius:6px;border:1px solid #c7cbd6;background:#fff;cursor:pointer}
+    main{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+    .card{background:#fff;border:1px solid #e3e6ee;padding:12px;border-radius:8px;box-shadow:0 1px 0 rgba(16,24,40,0.02)}
+    .gear-name{font-weight:600;margin-bottom:6px;word-break:break-word}
+    .gear-id{font-size:12px;color:#6b7280;background:#f3f4f6;padding:6px;border-radius:6px;display:inline-block}
+    .empty{color:#6b7280;padding:24px;text-align:center}
+    footer{font-size:12px;color:#6b7280;margin-top:12px}
+    @media (max-width:520px){main{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Gear Cards</h1>
+      <div style="font-size:12px;color:#6b7280">Loaded from GearConfig/gears.json</div>
+    </div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search by name or id" />
+      <button id="refresh">Refresh</button>
+      <button id="export">Export HTML</button>
+    </div>
+  </header>
+
+  <main id="cards"></main>
+
+  <div id="status" class="empty"></div>
+
+  <footer>Drop additional gear objects into <strong>GearConfig/gears.json</strong> and click Refresh.</footer>
+
+  <script>
+    const JSON_PATH = 'GearConfig/gears.json';
+    const cardsEl = document.getElementById('cards');
+    const statusEl = document.getElementById('status');
+    const searchEl = document.getElementById('search');
+    const refreshBtn = document.getElementById('refresh');
+    const exportBtn = document.getElementById('export');
+
+    let gears = [];
+
+    async function loadGears() {
+      setStatus('Loading gears...');
+      try {
+        const res = await fetch(JSON_PATH + '?_=' + Date.now());
+        if (!res.ok) throw new Error('Failed to fetch gears.json');
+        gears = await res.json();
+        renderCards(gears);
+        setStatus(gears.length ? '' : 'No gears found.');
+      } catch (err) {
+        gears = [];
+        renderCards([]);
+        setStatus('Error loading gears.json');
+        console.error(err);
+      }
+    }
+
+    function renderCards(list) {
+      cardsEl.innerHTML = '';
+      if (!list.length) return;
+      const fragment = document.createDocumentFragment();
+      list.forEach(g => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        const name = document.createElement('div');
+        name.className = 'gear-name';
+        name.textContent = g.name || '(unnamed)';
+        const id = document.createElement('div');
+        id.className = 'gear-id';
+        id.textContent = g.id || '';
+        card.appendChild(name);
+        card.appendChild(id);
+        fragment.appendChild(card);
+      });
+      cardsEl.appendChild(fragment);
+    }
+
+    function setStatus(text) {
+      statusEl.textContent = text;
+      statusEl.style.display = text ? 'block' : 'none';
+    }
+
+    function applySearch() {
+      const q = searchEl.value.trim().toLowerCase();
+      if (!q) return renderCards(gears);
+      const filtered = gears.filter(g =>
+        (g.name && g.name.toLowerCase().includes(q)) ||
+        (g.id && g.id.toLowerCase().includes(q))
+      );
+      renderCards(filtered);
+      setStatus(filtered.length ? '' : 'No gears match your search.');
+    }
+
+    refreshBtn.addEventListener('click', () => loadGears());
+    searchEl.addEventListener('input', applySearch);
+
+    exportBtn.addEventListener('click', async () => {
+      try {
+        const visibleGears = Array.from(cardsEl.querySelectorAll('.card')).map(c => {
+          return { name: c.querySelector('.gear-name').textContent, id: c.querySelector('.gear-id').textContent };
+        });
+        const html = `<!doctype html><meta charset="utf-8"><title>Gear Cards Export</title><style>
+          body{font-family:system-ui,Segoe UI,Roboto,Arial;padding:20px;background:#f6f7fb}
+          .card{background:#fff;border:1px solid #e3e6ee;padding:12px;border-radius:8px;margin:10px 0}
+          .gear-name{font-weight:600}
+          .gear-id{font-size:12px;color:#6b7280}
+        </style><h1>Gear Cards</h1>` + visibleGears.map(g => `<div class="card"><div class="gear-name">${escapeHtml(g.name)}</div><div class="gear-id">ID: ${escapeHtml(g.id)}</div></div>`).join('') ;
+        const blob = new Blob([html], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'gear-cards-export.html';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      } catch (e) {
+        console.error(e);
+      }
+    });
+
+    function escapeHtml(str='') {
+      return str.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    loadGears();
+  </script>
+</body>
+</html>

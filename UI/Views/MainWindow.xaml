@@ -1,0 +1,31 @@
+<Window x:Class="BananaMacro.UI.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:BananaMacro.UI.ViewModels"
+        Title="BananaMacro" Height="720" Width="1100">
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Command="{Binding LoadCommand}" Content="Load" />
+            <Button Command="{Binding SaveCommand}" Content="Save" />
+        </ToolBar>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <local:MacrosView Grid.Column="0" />
+            <ContentControl Grid.Column="1" Content="{Binding SelectedMacro}">
+                <ContentControl.ContentTemplate>
+                    <DataTemplate DataType="{x:Type vm:MacroViewModel}">
+                        <local:MacroEditorControl />
+                    </DataTemplate>
+                </ContentControl.ContentTemplate>
+            </ContentControl>
+        </Grid>
+    </DockPanel>
+</Window>

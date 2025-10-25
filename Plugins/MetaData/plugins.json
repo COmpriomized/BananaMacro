@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "com.example.sampleplugin",
+    "Name": "Sample Plugin",
+    "AssemblyPath": "Plugins/Installed/SamplePlugin.dll",
+    "Version": "1.0.0",
+    "Enabled": true,
+    "DiscoveredAt": "2025-10-25T00:00:00Z"
+  }
+]

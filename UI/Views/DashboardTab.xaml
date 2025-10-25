@@ -1,0 +1,11 @@
+<UserControl x:Class="BananaMacro.UI.Views.DashboardTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:BananaMacro.UI.ViewModels">
+  <Grid Background="{DynamicResource PanelBrush}" Padding="12">
+    <StackPanel>
+      <TextBlock Text="Dashboard" Style="{StaticResource SectionTitle}"/>
+      <TextBlock Text="{Binding Dashboard.Status}" Foreground="{DynamicResource TextBrush}" Margin="0,8,0,0"/>
+    </StackPanel>
+  </Grid>
+</UserControl>

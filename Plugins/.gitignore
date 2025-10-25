@@ -1,0 +1,6 @@
+# Ignore installed plugin binaries and build artifacts
+/Installed/**
+/Tools/**/bin/
+/Tools/**/obj/
+*.nupkg
+*.zip

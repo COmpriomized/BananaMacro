@@ -1,0 +1,59 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{07D57EEB-2F50-60C4-C011-FE4FA775C9A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplePlugin", "Plugins\Samples\SamplePlugin.csproj", "{A091AF5A-797F-829A-B01E-08EEB0C8B04E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BananaMacro.Tests.Integration", "Tests\BananaMacro.Tests.Integration\BananaMacro.Tests.Integration.csproj", "{5C0C3AFE-8048-543A-1EB2-269A455D4F51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BananaMacro.Tests.UI", "Tests\BananaMacro.Tests.UI\BananaMacro.Tests.UI.csproj", "{70498062-3A68-C3B4-BD70-535E76EB24F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BananaMacro.Tests.Unit", "Tests\BananaMacro.Tests.Unit\BananaMacro.Tests.Unit.csproj", "{67E31F4E-ADCC-D581-E50D-E492DEE5E6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUtilities", "Tests\TestUtilities\TestUtilities.csproj", "{50FF69AA-4E0A-A732-FE82-639FB34AC588}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A091AF5A-797F-829A-B01E-08EEB0C8B04E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A091AF5A-797F-829A-B01E-08EEB0C8B04E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A091AF5A-797F-829A-B01E-08EEB0C8B04E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A091AF5A-797F-829A-B01E-08EEB0C8B04E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0C3AFE-8048-543A-1EB2-269A455D4F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0C3AFE-8048-543A-1EB2-269A455D4F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0C3AFE-8048-543A-1EB2-269A455D4F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0C3AFE-8048-543A-1EB2-269A455D4F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70498062-3A68-C3B4-BD70-535E76EB24F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70498062-3A68-C3B4-BD70-535E76EB24F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70498062-3A68-C3B4-BD70-535E76EB24F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70498062-3A68-C3B4-BD70-535E76EB24F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67E31F4E-ADCC-D581-E50D-E492DEE5E6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E31F4E-ADCC-D581-E50D-E492DEE5E6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E31F4E-ADCC-D581-E50D-E492DEE5E6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E31F4E-ADCC-D581-E50D-E492DEE5E6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FF69AA-4E0A-A732-FE82-639FB34AC588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FF69AA-4E0A-A732-FE82-639FB34AC588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FF69AA-4E0A-A732-FE82-639FB34AC588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FF69AA-4E0A-A732-FE82-639FB34AC588}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A091AF5A-797F-829A-B01E-08EEB0C8B04E} = {07D57EEB-2F50-60C4-C011-FE4FA775C9A8}
+		{5C0C3AFE-8048-543A-1EB2-269A455D4F51} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{70498062-3A68-C3B4-BD70-535E76EB24F5} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{67E31F4E-ADCC-D581-E50D-E492DEE5E6DB} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{50FF69AA-4E0A-A732-FE82-639FB34AC588} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9BC0933-DBB0-4E7B-BCA1-44222387E2CD}
+	EndGlobalSection
+EndGlobal

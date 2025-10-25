@@ -1,0 +1,32 @@
+<UserControl x:Class="BananaMacro.UI.Views.MacroTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ctrl="clr-namespace:BananaMacro.UI.Controls">
+  <Grid Background="{DynamicResource PanelBrush}" Padding="12">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="320"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <StackPanel Grid.Column="0" Margin="8">
+      <TextBlock Text="Macros" Foreground="{DynamicResource TextBrush}" FontSize="16" Margin="0,0,0,8"/>
+      <ListBox ItemsSource="{Binding Macro.Macros}" SelectedItem="{Binding Macro.SelectedMacro}" DisplayMemberPath="Name" Height="420"/>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,8,0,0">
+        <Button Content="New" Command="{Binding Macro.NewCommand}" Width="84"/>
+        <Button Content="Load" Command="{Binding Macro.LoadCommand}" Width="84"/>
+        <Button Content="Save" Command="{Binding Macro.SaveCommand}" Width="84"/>
+      </StackPanel>
+    </StackPanel>
+
+    <Border Grid.Column="1" Margin="8" Background="{DynamicResource BgBrush}" Padding="12" CornerRadius="6">
+      <StackPanel>
+        <TextBlock Text="{Binding Macro.SelectedMacro.Name}" Foreground="{DynamicResource AccentBrush}" FontSize="18"/>
+        <ctrl:MacroEditor x:Name="Editor" DataContext="{Binding Macro.SelectedMacro}" Margin="0,8,0,8"/>
+        <StackPanel Orientation="Horizontal">
+          <Button Content="Start" Command="{Binding Macro.StartCommand}" Width="96"/>
+          <Button Content="Stop" Command="{Binding Macro.StopCommand}" Width="96"/>
+        </StackPanel>
+      </StackPanel>
+    </Border>
+  </Grid>
+</UserControl>

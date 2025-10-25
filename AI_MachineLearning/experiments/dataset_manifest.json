@@ -1,0 +1,7 @@
+{
+  "name": "discord_macro_dataset",
+  "samples": 500,
+  "labels": ["macro_trigger", "no_action"],
+  "source": "DiscordService logs",
+  "createdAt": "2025-10-24T18:00:00Z"
+}

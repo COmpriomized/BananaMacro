@@ -1,0 +1,10 @@
+<UserControl x:Class="BananaMacro.UI.Views.GearsTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid Background="{DynamicResource PanelBrush}" Padding="12">
+    <StackPanel>
+      <TextBlock Text="Gears" Style="{StaticResource SectionTitle}"/>
+      <TextBlock Text="Gear configs and editors" Foreground="{DynamicResource TextBrush}" Margin="0,8,0,0"/>
+    </StackPanel>
+  </Grid>
+</UserControl>
