@@ -1,0 +1,97 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+out/
+publish/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+.history/
+
+# NuGet and package caches
+packages/
+*.nupkg
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+# Dotnet CLI templates and artifacts
+.nuget/packages/
+artifacts/
+TestResults/
+
+# Logs, runtime data, saved/loaded data from your project
+Logs/
+log/
+Logs_*/
+LoadedData/
+SavedData/
+AppData/
+SavedData/*
+SavedData/**
+
+# Databases and data files
+*.mdf
+*.ldf
+*.sqlite
+*.db
+*.sqlite3
+
+# User-specific or local config
+appsettings.Local.json
+appsettings.Development.json
+local.settings.json
+secrets.json
+*.secrets.json
+
+# Generated resources, caches, temp
+*.cache
+*.tmp
+tmp/
+temp/
+
+# Test and coverage
+coverage/
+coverage-reports/
+*.coverage
+*.coveragexml
+
+# Node / frontend if present
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+# Python virtualenvs if present for tooling
+venv/
+.env/
+.venv/
+
+# Plugins, compiled assets, and IDE plugin folders
+Plugins/
+*.plugin
+*/bin/
+*/obj/
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Ignore any local build tool output directories you use
+# (example custom folders you might create)
+BuildOutput/
